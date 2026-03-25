@@ -1,4 +1,4 @@
-<h1>Preparing Active Directory Infrastructure in Microsoft Azure</h1>
+<h1>Group Policy Management & Shared Resources</h1>
 <h2>Objective</h2>
 In this lab, I configured Group Policy to control parts of the user desktop environment and improve security. Desktop icons were removed to create a more standardized workspace for users. I also created a shared folder on the domain controller and deployed a Group Policy that automatically maps a network drive when users log in, allowing centralized access to company files.
 
