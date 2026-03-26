@@ -47,7 +47,7 @@ Reset the password
 
 <img width="1235" height="902" alt="23Unlocking user account" src="https://github.com/user-attachments/assets/2ac6be79-4175-45c7-a1d2-8642f4e9a1d0" />
 
-<h4>Desktop Restriction Policy</h4>
+<h3>Desktop Restriction Policy</h3>
 
 To simulate a managed work environment, a desktop restriction policy was created to prevent standard users from accessing certain icons on the desktop and system settings.
 
