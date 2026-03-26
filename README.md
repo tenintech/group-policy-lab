@@ -21,22 +21,12 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
 
 
 
-<h2>Group Policy Configurations</h2>
+<h2> Key Group Policy Configurations</h2>
 
 <h3>1. Account Lockout Policy</h3>
 
-Open Group Policy Management.
-
-Create a new Group Policy Object (GPO) to apply basic domain settings.
-
-Example configuration:
-- Password policy
-- Account lockout policy
-- Desktop restrictions
-
-Link the policy to the appropriate Organizational Unit.
-
-Verify the policy applies to domain users.
+Created a Group Policy Object (GPO) to enforce password thresholds and account lockout settings.
+Tested policy by attempting multiple failed logins to lock the account, then unlocked it.
 
 <img width="1223" height="834" alt="19using GPMC to create GPO for Password Threshold" src="https://github.com/user-attachments/assets/d99b1fe3-fadc-4506-8a83-f57fc6c54e9b" />
 
@@ -47,9 +37,10 @@ Reset the password
 
 <img width="1235" height="902" alt="23Unlocking user account" src="https://github.com/user-attachments/assets/2ac6be79-4175-45c7-a1d2-8642f4e9a1d0" />
 
-<h3>Desktop Restriction Policy</h3>
+<h3>2. Desktop Restriction Policy</h3>
 
-To simulate a managed work environment, a desktop restriction policy was created to prevent standard users from accessing certain icons on the desktop and system settings.
+To simulate a managed work environment, a desktop restriction policy was created to prevent standard users from accessing certain icons on the desktop and system settings. Created a GPO to remove system icons (Recycle Bin, Computer, Properties) for standard users.
+Applied the policy to the _EMPLOYEES OU and verified on a client machine.
 
 Steps:
 - Open Group Policy Management
@@ -75,7 +66,40 @@ Test the policy:
 
 Result:
 Icons no longer visible
-<h3>1. Removed system icons from the desktop using Group Policy</h3>
+
+
+
+<hr />
+
+<br />
+
+<h3>3. Restrict Access to Control Panel</h3>
+
+Implemented security hardening by restricting user access to the Control Panel through GPO.
+Steps:
+- Open Group Policy Management
+- Right Click Group Policy Objects 
+- Create New GPO
+      - Name: Desktop Restrictions Policy
+- Navigate to:
+
+User Configuration → Administrative Templates → Control Panel 
+
+ - Create GPO Named "Restrict Control Panel Access"
+
+<img width="538" height="421" alt="21  naming gpo" src="https://github.com/user-attachments/assets/eaed2285-1d87-45ea-a15f-7f447af27018" />
+
+
+2. Enabling Policy in Control Panel Settings
+
+
+<img width="761" height="396" alt="23 enabled" src="https://github.com/user-attachments/assets/53c248a7-f0c3-4a69-a9aa-ce5de618e91a" />
+
+- Linking policy to already existing OU "_EMPOLYEES"
+
+  <img width="539" height="384" alt="24  link to ou" src="https://github.com/user-attachments/assets/78c9d2b7-15c8-4242-b172-b5b4755da477" />
+
+  
 
 
 
@@ -84,19 +108,9 @@ Icons no longer visible
 
 <br />
 
-<h3>2. Restrict Access to Control Panel</h3>
+<h3>4. Map a Network Drive Automatically</h3>
 
-Security hardening
-User environment control
-
-
-<hr />
-
-<br />
-
-<h3>3. Map a Network Drive Automatically</h3>
-
-Configured a Group Policy Object to automatically map a shared company drive for all domain users at login.
+Created a Group Policy Object to automatically map a shared company drive for all domain users at login.
 
 1. Shared Folder Created on Server
 
