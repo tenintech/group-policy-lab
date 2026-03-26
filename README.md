@@ -24,6 +24,58 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
 
 <h2>Step-by-Step Walkthrough</h2>
 
+<h3>6. Configure Basic Group Policy</h3>
+
+Open Group Policy Management.
+
+Create a new Group Policy Object (GPO) to apply basic domain settings.
+
+Example configuration:
+- Password policy
+- Account lockout policy
+- Desktop restrictions
+
+Link the policy to the appropriate Organizational Unit.
+
+Verify the policy applies to domain users.
+
+<img width="1223" height="834" alt="19using GPMC to create GPO for Password Threshold" src="https://github.com/user-attachments/assets/d99b1fe3-fadc-4506-8a83-f57fc6c54e9b" />
+
+After setting the password threshold I attempted to login as user "bot.vug" with the wrong password 10 times and was locked out of the account. 
+Unlock the account
+Reset the password
+
+
+<img width="1235" height="902" alt="23Unlocking user account" src="https://github.com/user-attachments/assets/2ac6be79-4175-45c7-a1d2-8642f4e9a1d0" />
+
+<h4>Apply a Desktop Restriction Policy</h4>
+
+To simulate a managed work environment, a desktop restriction policy was created to prevent standard users from accessing certain icons on the desktop and system settings.
+
+Steps:
+- Open Group Policy Management
+- Right Click Group Policy Objects 
+- Create New GPO
+      - Name: Desktop Restrictions Policy
+- Navigate to:
+
+User Configuration → Administrative Templates → Desktop
+<img width="713" height="406" alt="EnablingDesktopRestrictions" src="https://github.com/user-attachments/assets/6b9ac319-26ee-489b-8e4e-3dc8b815393b" />
+
+
+Enable the policy:
+Remove Computer Icon, Properties and Recycle Bin Icon
+
+Apply the policy to the _EMPLOYEES Organizational Unit.
+
+<img width="655" height="409" alt="linkpolicyto OU" src="https://github.com/user-attachments/assets/9dc1ba05-1e47-4f93-af73-ae37bc03c171" />
+
+Test the policy:
+- Log into Client1 as a standard user
+- Observe the absence of icons and properties menu.
+
+Result:
+Icons no longer visible
 <h3>1. Removed system icons from the desktop using Group Policy</h3>
 
 Within Microsoft Azure, deploy a Windows Server Virtual Machine that will serve as the Domain Controller.
