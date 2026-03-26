@@ -161,11 +161,3 @@ The difference between share permissions and NTFS permissions
 How Group Policy Objects are linked to Organizational Units (OUs)
 How to verify and troubleshoot policy deployment on client machines
 The importance of centralized management in Active Directory environments
-
-<h2>⏭️Next Steps</h2>
-
-In the next phase of this lab I'll:
-- Install Active Directory Domain Services (AD DS)
-- Promote the server to a Domain Controller
-- Join Client1 to the domain
-- Create test user accounts
