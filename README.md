@@ -21,7 +21,7 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
 
 
 
-<h2>Step-by-Step Walkthrough</h2>
+<h2>Step-by-Step Walkthrough Group Policy Configurations</h2>
 
 <h3>1. Configure Basic Group Policy</h3>
 
