@@ -77,14 +77,8 @@ Result:
 Icons no longer visible
 <h3>1. Removed system icons from the desktop using Group Policy</h3>
 
-Within Microsoft Azure, deploy a Windows Server Virtual Machine that will serve as the Domain Controller.
 
-Configuration:
-- Virtual Machine Name: DC1
-- Image: Windows Server 2025
-- Virtual Network: Named "VNet10" Same network that will be used by the client machine
 
-<img width="900" height="1000" alt="Created Domain Controller VM" src="https://github.com/user-attachments/assets/2e95058d-039e-450f-80d1-d68e1015592e" />
 
 <hr />
 
@@ -95,12 +89,6 @@ Configuration:
 Security hardening
 User environment control
 
-Configuration:
-- Virtual Machine Name: Client1
-- Image: Windows 10 Enterprise
-- Virtual Network: Same VNet as the Domain Controller (VNet10)
-
-<img width="1920" height="1080" alt="Created Client VM" src="https://github.com/user-attachments/assets/f1cfc3f4-1d6a-4dad-88f2-5dd9b40c8fe1" />
 
 <hr />
 
@@ -146,7 +134,6 @@ Configured a Group Policy Object to automatically map a shared company drive for
   
   
 
-<img width="1920" height="1080" alt="Configuring Static IP Address" src="https://github.com/user-attachments/assets/129a2b34-0409-4c4b-b4f2-437b7fc79510" />
 
 <hr />
 
