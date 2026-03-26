@@ -17,14 +17,13 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
   - Server Message Block (SMB) File Sharing
   
 
-
 <br />
 
 
 
 <h2>Step-by-Step Walkthrough</h2>
 
-<h3>6. Configure Basic Group Policy</h3>
+<h3>1. Configure Basic Group Policy</h3>
 
 Open Group Policy Management.
 
@@ -91,9 +90,10 @@ Configuration:
 
 <br />
 
-<h3>2. Create the Client Virtual Machine</h3>
+<h3>2. Restrict Access to Control Panel</h3>
 
-Create another Windows Virtual Machine that will act as a client computer in the domain.
+Security hardening
+User environment control
 
 Configuration:
 - Virtual Machine Name: Client1
@@ -106,7 +106,7 @@ Configuration:
 
 <br />
 
-<h3>3. Configure a Static Private IP Address for the Domain Controller</h3>
+<h3>3. Map a Network Drive Automatically</h3>
 
 Set the Domain Controller's Network Interface Card (NIC) to use a static private IP address.  
 This ensures the IP address does not change and allows the client machine to reliably use the Domain Controller as its DNS server.
@@ -167,7 +167,11 @@ This confirms that the client machine is using the Domain Controller as its DNS 
 <hr />
 
 ## What I Learned
-During this lab I learned how important DNS configuration is when setting up Active Directory in Azure. Matching the IP Address to the same network is critical for ensuring direct, secure, and reliable communication for Active Directory services. Otherwise, network traffic may be blocked, misrouted or fail to resolve.
+How organizations provide shared file access to users using Group Policy
+The difference between share permissions and NTFS permissions
+How Group Policy Objects are linked to Organizational Units (OUs)
+How to verify and troubleshoot policy deployment on client machines
+The importance of centralized management in Active Directory environments
 
 <h2>⏭️Next Steps</h2>
 
