@@ -23,7 +23,7 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
 
 <h2>Group Policy Configurations</h2>
 
-<h3>1. Configure Basic Group Policy</h3>
+<h3>1. Password Polidy</h3>
 
 Open Group Policy Management.
 
