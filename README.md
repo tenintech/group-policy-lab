@@ -23,7 +23,7 @@ In this lab, I configured Group Policy to control parts of the user desktop envi
 
 <h2>Group Policy Configurations</h2>
 
-<h3>1. Password Polidy</h3>
+<h3>1. Account Lockout Policy</h3>
 
 Open Group Policy Management.
 
@@ -47,7 +47,7 @@ Reset the password
 
 <img width="1235" height="902" alt="23Unlocking user account" src="https://github.com/user-attachments/assets/2ac6be79-4175-45c7-a1d2-8642f4e9a1d0" />
 
-<h4>Apply a Desktop Restriction Policy</h4>
+<h4>Desktop Restriction Policy</h4>
 
 To simulate a managed work environment, a desktop restriction policy was created to prevent standard users from accessing certain icons on the desktop and system settings.
 
@@ -134,54 +134,7 @@ Configured a Group Policy Object to automatically map a shared company drive for
 
 <br />
 
-<h3>4. Connect to the Domain Controller Using Remote Desktop</h3>
 
-Log into the Domain Controller (DC1) using Remote Desktop Protocol (RDP).
-
-To verify connectivity between machines, temporarily disable the firewall and allow ICMP traffic for testing.
-
-Run:
-wf.msc
-
-This opens the Windows Defender Firewall management console.
-
-<img width="1920" height="1080" alt="Connecting via Remote Desktop" src="https://github.com/user-attachments/assets/e8894acc-6bb7-4411-bba3-00da07647754" />
-
-<img width="1272" height="984" alt="Disabling Firewall for Testing" src="https://github.com/user-attachments/assets/0fb3ecf4-b5db-47c4-98de-aa5da97eb6a3" />
-
-<hr />
-
-<br />
-
-<h3>5. Configure Client DNS Settings</h3>
-
-Set the DNS server of the client virtual machine (Client1) to point to the private IP address of the Domain Controller (DC1).
-
-This allows the client machine to locate and authenticate with the domain once Active Directory is installed.
-
-<img width="1076" height="996" alt="Changing DNS Settings on Client VM" src="https://github.com/user-attachments/assets/64087d13-0377-48f8-8104-4e5e3fd8c581" />
-
-<hr />
-
-<br />
-
-<h3>6. Test Network Connectivity</h3>
-
-Open PowerShell on Client1 and test connectivity to the Domain Controller using the ping command.
-
-Use:
-ping 10.0.0.4
-
-Then verify DNS configuration using:
-ipconfig /all
-
-This confirms that the client machine is using the Domain Controller as its DNS server.
-
-<img width="951" height="967" alt="Successful Ping Test" src="https://github.com/user-attachments/assets/e72a658e-4c85-41d4-ab91-57dc85b4d0e8" />
-
-<img width="1080" height="925" alt="DNS Configuration Confirmation" src="https://github.com/user-attachments/assets/80e8d3d8-04b1-43d2-91d9-876d1890156b" />
-
-<hr />
 
 ## What I Learned
 How organizations provide shared file access to users using Group Policy
