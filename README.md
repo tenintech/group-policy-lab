@@ -110,20 +110,38 @@ Configuration:
 
 Configured a Group Policy Object to automatically map a shared company drive for all domain users at login.
 
- - 1. Shared Folder Created on Server
-      <img width="365" height="424" alt="1  shared folder created " src="https://github.com/user-attachments/assets/084e9429-c6cb-41a9-9e18-914fb2979f25" />
+1. Shared Folder Created on Server
 
-- 2. Folder Sharing and Permissions
-     <img width="392" height="416" alt="2  Permissions" src="https://github.com/user-attachments/assets/aae9e12f-cebf-4b83-af18-65d5d67a6c5e" />
 
-- 3. Drive Map GPO configuration
-     <img width="686" height="428" alt="5  New mapped drive" src="https://github.com/user-attachments/assets/5c894b0c-946b-4d13-9444-7ccc502823a2" />
+    <img width="365" height="424" alt="1  shared folder created " src="https://github.com/user-attachments/assets/084e9429-c6cb-41a9-9e18-914fb2979f25" />
+<br />
 
-- 4. Universal Naming Convention (UNC) Path Configuration
-     <img width="302" height="365" alt="6  Create mapped drive" src="https://github.com/user-attachments/assets/f98d3a7f-360f-4739-9ef6-17f8ec06f39f" />
 
-- 5. Link GPO to the OU (_EMPLOYEES)
-     <img width="440" height="413" alt="6 Link an existing GPO" src="https://github.com/user-attachments/assets/678fedc8-1f5e-4be5-abd6-b341d16bd99a" />
+3. Folder Sharing and Permissions
+
+
+    <img width="392" height="416" alt="2  Permissions" src="https://github.com/user-attachments/assets/aae9e12f-cebf-4b83-af18-65d5d67a6c5e" />
+<br />
+
+
+4. Drive Map GPO configuration
+
+
+   <img width="686" height="428" alt="5  New mapped drive" src="https://github.com/user-attachments/assets/5c894b0c-946b-4d13-9444-7ccc502823a2" />
+<br />
+
+
+5. Universal Naming Convention (UNC) Path Configuration
+
+
+   <img width="302" height="365" alt="6  Create mapped drive" src="https://github.com/user-attachments/assets/f98d3a7f-360f-4739-9ef6-17f8ec06f39f" />
+<br />
+
+
+6. Link GPO to the OU (_EMPLOYEES)
+
+
+   <img width="440" height="413" alt="6 Link an existing GPO" src="https://github.com/user-attachments/assets/678fedc8-1f5e-4be5-abd6-b341d16bd99a" />
 
   
   
