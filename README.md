@@ -1,6 +1,5 @@
 # Group Policy Management & Shared Resources
 
-
 ---
 
 ## Objective
@@ -37,7 +36,7 @@ Created a Group Policy Object (GPO) to enforce password attempt limits and accou
 - Verified that the account locked after the threshold was reached
 - Unlocked the account and reset the password in Active Directory
 
-![Using GPMC to create GPO for Password Threshold](https://github.com/user-attachments/assets/d99b1fe3-fadc-4506-8a83-f57fc6c54e9b)
+<img width="1223" height="834" alt="19using GPMC to create GPO for Password Threshold" src="https://github.com/user-attachments/assets/fdd75e56-b07b-43cf-8abb-f619f4c3bd56" />
 
 After configuring the policy, I attempted to log in as the user **bot.vug** with an incorrect password multiple times until the account was locked.
 
@@ -95,19 +94,31 @@ Linked the policy to the **_EMPLOYEES OU**
 
 ## 4. Automatically Map a Network Drive
 
+
+
 I created a shared company folder on the domain controller and used Group Policy Preferences to automatically map a network drive for users when they log in.
+
+
 
 ### Shared Folder Created on Server
 
+
+
 ![Shared folder created](https://github.com/user-attachments/assets/084e9429-c6cb-41a9-9e18-914fb2979f25)
 
+
+
 ### Folder Sharing and Permissions
+
 
 ![Permissions configured](https://github.com/user-attachments/assets/aae9e12f-cebf-4b83-af18-65d5d67a6c5e)
 
 ### Drive Map GPO Configuration
 
+
 ![Mapped drive configuration](https://github.com/user-attachments/assets/5c894b0c-946b-4d13-9444-7ccc502823a2)
+
+
 
 ### UNC Path Configuration
 
@@ -115,33 +126,29 @@ UNC path used:
 
 Configured the drive using the server's shared folder path.
 
-
 \\DCMachine\CompanyFiles
+
 
 <img width="302" height="365" alt="UNC path configuration" src="https://github.com/user-attachments/assets/f98d3a7f-360f-4739-9ef6-17f8ec06f39f" />
 
+
 Link GPO to the _EMPLOYEES OU
 
+
 <img width="440" height="413" alt="Link GPO" src="https://github.com/user-attachments/assets/678fedc8-1f5e-4be5-abd6-b341d16bd99a" />
+
 
 Result on Client Machine (Most Important Test)
 When users log in, the network drive automatically appears in File Explorer as:
 
-Z: Company Files
+  Z: Company Files
 
 This confirms the Group Policy successfully deployed and the shared resource is accessible to domain users.
 
-Skills Demonstrated
-Active Directory user environment management
-Group Policy creation and deployment
-Organizational Unit (OU) policy targeting
-Network drive mapping using Group Policy Preferences
-File sharing using SMB
-Account lockout and security policy testing
-Troubleshooting Group Policy deployment on client machines
-What I Learned
-How organizations provide shared file access using Group Policy
-The difference between Share Permissions and NTFS Permissions
+
+
+## What I Learned
+Difference between Share Permissions and NTFS Permissions
 How Group Policy Objects are linked and applied to Organizational Units
 How to test and verify policy deployment on client machines
 The importance of centralized management in enterprise IT environments
