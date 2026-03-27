@@ -138,7 +138,6 @@ Link GPO to the _EMPLOYEES OU
 <img width="440" height="413" alt="Link GPO" src="https://github.com/user-attachments/assets/678fedc8-1f5e-4be5-abd6-b341d16bd99a" />
 
 
-Result on Client Machine (Most Important Test)
 When users log in, the network drive automatically appears in File Explorer as:
 
   Z: Company Files
