@@ -120,7 +120,7 @@ I created a shared company folder on the domain controller and used Group Policy
 
 
 
-### UNC Path Configuration
+### Universal Naming Convention (UNC) Path Configuration
 
 UNC path used:
 
