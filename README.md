@@ -146,7 +146,7 @@ This confirms the Group Policy successfully deployed and the shared resource is 
 
 
 
-## What I Learned
+## 💡What I Learned
 Difference between Share Permissions and NTFS Permissions
 How Group Policy Objects are linked and applied to Organizational Units
 How to test and verify policy deployment on client machines
